@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Kitty Deluxe Chaos",
+  "version": "2.0",
+  "description": "Deluxe kawaii Hello Kitty experience",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Hello Kitty Deluxe"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "kitty.svg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
