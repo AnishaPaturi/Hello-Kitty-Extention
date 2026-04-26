@@ -1,4 +1,1 @@
-
-.kitty{position:fixed;width:82px;height:82px;z-index:2147483647;pointer-events:none;transition:all 1.2s ease}
-.spark{position:fixed;width:8px;height:8px;border-radius:50%;background:#ff69b4;z-index:2147483647;animation:pop .7s forwards}
-@keyframes pop{to{opacity:0;transform:scale(2)}}
+.fx{position:fixed;z-index:2147483647;font-size:28px;animation:f 3s forwards;pointer-events:none}@keyframes f{to{transform:translateY(-80px) rotate(180deg);opacity:0}}

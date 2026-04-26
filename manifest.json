@@ -1,14 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Hello Kitty Final Boss",
-  "version": "4.0",
-  "description": "Ultimate kawaii productivity universe",
+  "name": "Hello Kitty Ultra Final",
+  "version": "5.0",
+  "description": "Ultimate Sanrio productivity universe",
   "permissions": [
     "storage"
   ],
-  "action": {
-    "default_title": "Hello Kitty Final Boss"
-  },
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
@@ -22,17 +19,6 @@
       ],
       "css": [
         "style.css"
-      ]
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "kitty.svg",
-        "meow.mp3"
-      ],
-      "matches": [
-        "<all_urls>"
       ]
     }
   ]
