@@ -1,53 +1,27 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Hello Kitty Dashboard</title>
+<!doctype html><html><head><meta charset='utf-8'><title>Final Boss</title>
 <style>
-body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ffd6ea,#fff);display:flex;justify-content:center;align-items:center;height:100vh;color:#d63384}
-.wrap{background:#ffffffdd;padding:30px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.15);width:720px}
-h1{text-align:center;margin-top:0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.card{background:#fff;padding:18px;border-radius:18px}
-input,button,textarea{width:100%;padding:10px;border-radius:12px;border:1px solid #f3b6cf}
-button{background:#ff8bd1;color:white;font-weight:bold;cursor:pointer}
-.small{font-size:14px;color:#666}
-</style>
-</head>
-<body>
-<div class="wrap">
-<h1>🎀 Hello Kitty God Mode 🎀</h1>
-<div class="grid">
-<div class="card">
-<h3>Pomodoro Timer</h3>
-<div id="timer">25:00</div>
-<button onclick="startTimer()">Start</button>
-</div>
-<div class="card">
-<h3>Quick Notes</h3>
-<textarea id="notes" rows="6" placeholder="Write notes..."></textarea>
-<button onclick="saveNotes()">Save Notes</button>
-</div>
-<div class="card">
-<h3>Daily Quote</h3>
-<p id="quote">Be cute and productive.</p>
-</div>
-<div class="card">
-<h3>Links</h3>
-<p><a href='https://www.google.com'>Google</a></p>
-<p><a href='https://github.com'>GitHub</a></p>
-</div>
-</div>
-<p class="small">Your new tab is now kawaii + productive.</p>
-</div>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ffcce6,#fff);display:flex;justify-content:center;align-items:center;height:100vh}
+.wrap{width:900px;background:#ffffffdd;padding:24px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.card{background:#fff;padding:16px;border-radius:18px}
+button,input,textarea{width:100%;padding:10px;border-radius:12px;border:1px solid #f1b0d0}
+button{background:#ff69b4;color:#fff;font-weight:bold}
+</style></head><body><div class='wrap'>
+<h1>🎀 Hello Kitty Final Boss 🎀</h1>
+<div class='grid'>
+<div class='card'><h3>Pomodoro</h3><div id='t'>25:00</div><button onclick='start()'>Start</button></div>
+<div class='card'><h3>Todo</h3><input id='todo'><button onclick='add()'>Add</button><ul id='list'></ul></div>
+<div class='card'><h3>Weather</h3><p>Look outside bestie ☀️</p></div>
+<div class='card'><h3>Notes</h3><textarea id='n'></textarea><button onclick='save()'>Save</button></div>
+<div class='card'><h3>Study Streak</h3><p id='streak'></p><button onclick='inc()'>+1 Day</button></div>
+<div class='card'><h3>Links</h3><a href='https://google.com'>Google</a><br><a href='https://github.com'>GitHub</a></div>
+</div></div>
 <script>
-let time=1500, intv;
-function render(){let m=Math.floor(time/60),s=time%60;document.getElementById('timer').textContent=(m+'').padStart(2,'0')+':'+(s+'').padStart(2,'0')}
-function startTimer(){clearInterval(intv);intv=setInterval(()=>{if(time>0){time--;render()}},1000)}
-function saveNotes(){localStorage.setItem('kittyNotes',document.getElementById('notes').value)}
-document.getElementById('notes').value=localStorage.getItem('kittyNotes')||'';
-render();
-</script>
-</body>
-</html>
+let sec=1500,it;function r(){let m=Math.floor(sec/60),s=sec%60;document.getElementById('t').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
+function start(){clearInterval(it);it=setInterval(()=>{if(sec>0){sec--;r()}},1000)} r();
+function save(){localStorage.n=n.value}
+n.value=localStorage.n||''
+function add(){let li=document.createElement('li');li.textContent=todo.value;list.appendChild(li);todo.value=''}
+function inc(){let x=+(localStorage.st||0)+1;localStorage.st=x;streak.textContent=x+' days'}
+streak.textContent=(localStorage.st||0)+' days';
+</script></body></html>

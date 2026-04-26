@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Hello Kitty God Mode",
-  "version": "3.0",
-  "description": "Ultimate kawaii productivity browser extension",
+  "name": "Hello Kitty Final Boss",
+  "version": "4.0",
+  "description": "Ultimate kawaii productivity universe",
   "permissions": [
     "storage"
   ],
   "action": {
-    "default_title": "Hello Kitty God Mode"
+    "default_title": "Hello Kitty Final Boss"
   },
   "chrome_url_overrides": {
     "newtab": "newtab.html"
@@ -28,7 +28,8 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "kitty.svg"
+        "kitty.svg",
+        "meow.mp3"
       ],
       "matches": [
         "<all_urls>"

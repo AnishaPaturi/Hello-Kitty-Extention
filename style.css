@@ -1,9 +1,4 @@
 
-body::before{
-content:'';
-position:fixed;inset:0;pointer-events:none;z-index:2147483640;
-background:linear-gradient(45deg,rgba(255,192,203,.08),rgba(255,255,255,.03));
-}
-.kitty{position:fixed;width:88px;height:88px;z-index:2147483647;pointer-events:none;transition:all 1.5s ease}
-.sparkle{position:fixed;width:10px;height:10px;border-radius:50%;background:#ff8bd1;z-index:2147483647;pointer-events:none;animation:poof .7s forwards}
-@keyframes poof{to{opacity:0;transform:scale(2)}}
+.kitty{position:fixed;width:82px;height:82px;z-index:2147483647;pointer-events:none;transition:all 1.2s ease}
+.spark{position:fixed;width:8px;height:8px;border-radius:50%;background:#ff69b4;z-index:2147483647;animation:pop .7s forwards}
+@keyframes pop{to{opacity:0;transform:scale(2)}}
