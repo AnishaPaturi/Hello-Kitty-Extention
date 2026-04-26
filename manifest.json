@@ -1,13 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Hello Kitty Deluxe Chaos",
-  "version": "2.0",
-  "description": "Deluxe kawaii Hello Kitty experience",
+  "name": "Hello Kitty God Mode",
+  "version": "3.0",
+  "description": "Ultimate kawaii productivity browser extension",
   "permissions": [
     "storage"
   ],
   "action": {
-    "default_title": "Hello Kitty Deluxe"
+    "default_title": "Hello Kitty God Mode"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
   },
   "content_scripts": [
     {

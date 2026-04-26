@@ -1,25 +1,9 @@
 
-.kitty{
- position:fixed;width:90px;height:90px;z-index:2147483647;
- pointer-events:none;transition:all 1.4s ease-in-out;
- filter:drop-shadow(0 8px 10px rgba(0,0,0,.2));
+body::before{
+content:'';
+position:fixed;inset:0;pointer-events:none;z-index:2147483640;
+background:linear-gradient(45deg,rgba(255,192,203,.08),rgba(255,255,255,.03));
 }
-.sparkle{
- position:fixed;width:10px;height:10px;border-radius:50%;
- background:radial-gradient(circle,#fff,#ff8bd1);
- pointer-events:none;z-index:2147483647;
- animation:fade .8s linear forwards;
-}
-.heart{
- position:fixed;font-size:22px;pointer-events:none;
- z-index:2147483647;animation:fall 4s linear forwards;
-}
-.kitty-banner{
- position:fixed;top:15px;left:50%;transform:translateX(-50%);
- background:linear-gradient(90deg,#ffd1ea,#fff);
- color:#d63384;padding:12px 18px;border-radius:999px;
- font-family:Arial,sans-serif;font-weight:bold;
- z-index:2147483647;box-shadow:0 8px 18px rgba(0,0,0,.15);
-}
-@keyframes fade{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(2)}}
-@keyframes fall{from{transform:translateY(0);opacity:1}to{transform:translateY(110vh);opacity:0}}
+.kitty{position:fixed;width:88px;height:88px;z-index:2147483647;pointer-events:none;transition:all 1.5s ease}
+.sparkle{position:fixed;width:10px;height:10px;border-radius:50%;background:#ff8bd1;z-index:2147483647;pointer-events:none;animation:poof .7s forwards}
+@keyframes poof{to{opacity:0;transform:scale(2)}}
